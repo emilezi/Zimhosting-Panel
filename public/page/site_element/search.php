@@ -1,3 +1,5 @@
+<!-- Search Page -->
+
 <?php
 
 echo "<div class='container'>

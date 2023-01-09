@@ -1,3 +1,5 @@
+<!-- User edit form -->
+
 <?php
 require 'actions/user/user_delete.php';
 require 'actions/user/user_edit.php';

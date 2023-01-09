@@ -1,3 +1,5 @@
+<!-- User edit form -->
+
 <?php
 require 'actions/admin/user/user_edit.php';
 
@@ -23,7 +25,7 @@ if($user == true){
         </div>
 
         <div class='p-vertical'>
-        <input name='post_email' type='email' placeholder='Saisissez une adresse mail' value='".$user['email']."' required/>
+        <input name='post_email' type='email' placeholder='Saisissez une adresse email' value='".$user['email']."' required/>
         </div>
 
         <div class='p-vertical'>
@@ -37,6 +39,6 @@ if($user == true){
 
 }else{
 
-    header('Location: index.php');
+    header('Location: index.php?page=admin');
 
 }

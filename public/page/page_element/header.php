@@ -1,5 +1,7 @@
+<!-- Page text header element -->
+
 <header class='header-color'>
 
-    <h1>Zimhosting Panel</h1>
+    <h1><?= $Setting->getInterfaceName($db); ?></h1>
 
 </header>

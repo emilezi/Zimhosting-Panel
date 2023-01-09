@@ -1,3 +1,5 @@
+<!-- New user creation form -->
+
 <div class='right-container'>
     <div class='content-large'>
 

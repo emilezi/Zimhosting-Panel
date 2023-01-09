@@ -1,3 +1,5 @@
+<!-- Statistics page -->
+
 <?php
 
 $q1 = $db->prepare("SELECT * FROM applications WHERE installed=:installed");

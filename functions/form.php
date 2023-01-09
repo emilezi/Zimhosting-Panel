@@ -197,6 +197,31 @@ class Form{
     
     }
 
+    /**
+        * Verification of fields entered for the interface name
+        *
+        * @param array form post interface name information
+        *
+        * @return int if the fields are correctly filled in otherwise return the error number
+        *
+        */
+    public function FormInterfaceNameCheck($post){
+
+        if(!empty($post['post_interface_name']))
+        {
+            if(preg_match("#^[^<>]+$#i", $post['post_interface_name']))
+            {
+                return 0;
+            }else{
+                return 1;
+            }
+        }else{
+            return 2;
+
+        }
+
+    }
+
 }
 
 $Form = new Form();

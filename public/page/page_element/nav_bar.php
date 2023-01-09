@@ -1,3 +1,5 @@
+<!-- Navigation bar -->
+
 <nav>
 
     <div id='nav' class='nav-color'>
@@ -40,4 +42,4 @@
 
 </nav>
 
-<script src="ressources/style/zh_framework/js/zh_framework.js"></script>
+<script src="ressources/style/zimhosting_css/js/script.js"></script>

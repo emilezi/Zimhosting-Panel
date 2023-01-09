@@ -1,29 +1,31 @@
+<!-- Authentication form -->
+
 <div class='container'>
     <div class='form m-center'>
 
-<h1>Zimhosting</h1>
+    <h1><?= $Setting->getInterfaceName($db); ?></h1>
 
-<hr>
+    <hr>
 
-<h5>Authentification</h5>
+    <h5>Authentification</h5>
 
-<form method='post'>
+    <form method='post'>
 
-    <div class='p-vertical'>
-    <input name='post_identifier' type='text' placeholder='Saisissez votre identifiant' required/>
-    </div>
+        <div class='p-vertical'>
+        <input name='post_identifier' type='text' placeholder='Saisissez votre identifiant' required/>
+        </div>
 
-    <div class='p-vertical'>
-    <input name='post_password' type='password' placeholder='Saisissez votre mot de passe' required/>
-    </div>
+        <div class='p-vertical'>
+        <input name='post_password' type='password' placeholder='Saisissez votre mot de passe' required/>
+        </div>
 
-    <div class='p-vertical'>
-    <input type='submit' name='submit_login' value='Connexion'>
-    </div>
+        <div class='p-vertical'>
+        <input type='submit' name='submit_login' value='Connexion'>
+        </div>
 
-</form>
+    </form>
 
-<p><a href='index.php?page=user_recovery'>Mot de passe oublié ?</a></p>
+    <p><a href='index.php?page=user_recovery'>Mot de passe oublié ?</a></p>
 
     </div>
 </div>

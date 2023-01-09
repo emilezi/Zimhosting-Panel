@@ -17,6 +17,10 @@ if(isset($_GET['action']) && !empty($_GET['action'])){
             
         require 'public/page/site_element/admin/store.php';
                 
+    }elseif(($_GET['action'] == "app_information") && (isset($_GET['app_name'])) && (!empty($_GET['app_name']))){
+            
+        require 'public/page/site_element/admin/app_information.php';
+                
     }elseif($_GET['action'] == "users"){
             
         require 'public/page/site_element/admin/user/users.php';
@@ -38,6 +42,10 @@ if(isset($_GET['action']) && !empty($_GET['action'])){
     }elseif($_GET['action'] == "statistics"){
             
         require 'public/page/site_element/admin/statistics.php';
+            
+    }elseif($_GET['action'] == "appearance"){
+            
+        require 'public/page/site_element/admin/appearance.php';
             
     }elseif($_GET['action'] == "interface"){
             

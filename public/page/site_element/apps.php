@@ -1,3 +1,5 @@
+<!-- Application content page -->
+
 <?php
 
 if((isset($_SESSION['type'])) && ($_SESSION['type'] == "admin")){
@@ -29,7 +31,7 @@ if($q->rowCount() > 0){
         <a href='apps/".$app_list['name']."'>
         <div class='app app-hover'>";
     
-        echo "<img src='ressources/img/app_icon/".$app_list['category'].".png' width=256px;>";
+        echo "<img src='ressources/img/app_icon/".$app_list['category'].".png' width=192px;>";
         echo "<p>".$app_list['qualified_name']."</p>";
     
         echo "</div>
@@ -44,7 +46,7 @@ if($q->rowCount() > 0){
     <a href='index.php?page=admin&action=store'>
     <div class='app app-hover'>";
 
-    echo "<img src='ressources/img/app_icon/app_install.png' width=256px;>";
+    echo "<img src='ressources/img/app_icon/app_install.png' width=192px;>";
     echo "<p>Installer une application</p>";
 
     echo "</div>

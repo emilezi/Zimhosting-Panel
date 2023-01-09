@@ -1,3 +1,5 @@
+<!-- New user creation form -->
+
 <?php
 
 require 'actions/admin/user/user_delete.php';
@@ -16,10 +18,18 @@ while($users_list = $q->fetch(PDO::FETCH_ASSOC)){
 
     echo "<h4>".$users_list['identifier']."</h4>";
     echo "<hr class='fs-medium'>";
-    echo "<p>".$users_list['full_name']."</p>";
-    echo "<p>".$users_list['email']."</p>";
-    echo "<p>Type : ".$users_list['type']."</p>";
-    echo "<p>Actif : ".$users_list['active']."</p>";
+    echo "<p>Nom complet : ".$users_list['full_name']."</p>";
+    echo "<p>Adresse email : ".$users_list['email']."</p>";
+    if($users_list['type'] == 'admin'){
+    echo "<p>Type : Administrateur</p>";
+    }else{
+    echo "<p>Type : Utilisateur</p>";   
+    }
+    if($users_list['active'] == 'yes'){
+    echo "<p>Actif : Oui</p>";
+    }else{
+    echo "<p>Actif : Non</p>";
+    }
 
     echo "<hr class='fs-small'>
     <br/>";

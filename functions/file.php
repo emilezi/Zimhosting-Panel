@@ -34,36 +34,36 @@ class File{
         */
     public function CheckBackground($files){
 
-        if(isset($files["background"]) && $files["background"]["error"] == 0){
-            $extensions_list = array('.png');
-            $extension = strrchr($files['background']['name'], '.');
-
-            if(!empty($files['background']['name']))
+        if(!empty($files['background']['name']))
             {
 
-                if($files['background']['size'] < 10485760){
+            if(isset($files["background"]) && $files["background"]["error"] == 0){
+                $extensions_list = array('.png');
+                $extension = strrchr($files['background']['name'], '.');
 
-                    if(in_array($extension, $extensions_list)){
-    
-                        return 0;
-            
+                    if($files['background']['size'] < 10485760){
+
+                        if(in_array($extension, $extensions_list)){
+        
+                            return 0;
+                
+                        }else{
+                            
+                            return 1;
+        
+                        }
+        
                     }else{
-                        
-                        return 1;
-    
+        
+                        return 2;
+        
                     }
-    
+
                 }else{
-    
-                    return 2;
-    
+
+                    return 3;
+
                 }
-
-            }else{
-
-                return 3;
-
-            }
 
             }else{
 

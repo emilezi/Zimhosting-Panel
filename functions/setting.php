@@ -7,6 +7,45 @@
 class Setting{
 
     /**
+        * Get interface name information
+        *
+        * @param Object database connection
+        *
+        * @return string interface name set
+        *
+        */
+    public function getInterfaceName($db){
+
+        $q = $db->prepare("SELECT * FROM setting WHERE setting_name=:setting_name");
+        $q->execute([
+        'setting_name' => "interface_name"
+        ]);
+
+        $setting = $q->fetch();
+
+        return $setting['setting_set'];
+
+    }
+
+    /**
+        * Set interface name
+        *
+        * @param Object database connection
+        *
+        * @param string interface name set
+        *
+        */
+    public function setInterfaceName($db,$set){
+
+        $q = $db->prepare("UPDATE setting SET setting_set=:setting_set WHERE setting_name=:setting_name");
+        $q->execute([
+        'setting_set' => htmlspecialchars($set),
+        'setting_name' => 'interface_name'
+        ]);
+    
+    }
+
+    /**
         * Get background information
         *
         * @param Object database connection

@@ -1,3 +1,5 @@
+<!-- Page header element -->
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -5,12 +7,12 @@
         <?php
         $ip = $IP->getMachine();
         if(($ip == 'iphone') || ($ip == 'iPod') || ($ip == 'iPad')  || ($ip == 'Android')){
-            echo "<link rel='stylesheet' href='ressources/style/zh_framework/css/m.zh_framework.css'/>";
+            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/css/m.style.css'/>";
         }else{
-            echo "<link rel='stylesheet' href='ressources/style/zh_framework/css/zh_framework.css'/>";
+            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/css/style.css'/>";
         }
         ?>
-        <title>Zimhosting Panel</title>
+        <title>Zimhosting</title>
     </head>
 
     <?php

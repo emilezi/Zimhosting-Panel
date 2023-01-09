@@ -1,3 +1,5 @@
+<!-- Application store page -->
+
 <?php
 
 require 'functions/file.php';
@@ -20,7 +22,7 @@ if($q->rowCount() > 0){
     echo "<div class='siteapp'>
     <div class='app'>";
 
-    echo "<img src='ressources/img/app_icon/".$app_list['category'].".png' width=192px;>";
+    echo "<a href='index.php?page=admin&action=app_information&app_name=".$app_list['name']."'><img src='ressources/img/app_icon/".$app_list['category'].".png' width=192px;></a>";
     echo "<p>".$app_list['qualified_name']."</p>";
 
     if($app_list['installed'] == 'no'){

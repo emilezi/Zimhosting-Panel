@@ -1,3 +1,5 @@
+<!-- User password change form -->
+
 <?php
 require 'actions/user/user_password_edit.php';
 ?>

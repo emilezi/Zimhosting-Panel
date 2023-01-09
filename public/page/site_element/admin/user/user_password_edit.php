@@ -1,3 +1,5 @@
+<!-- User password change form -->
+
 <?php
 require 'actions/admin/user/user_password_edit.php';
 
@@ -33,7 +35,7 @@ if($user == true){
     
 }else{
 
-    header('Location: index.php');
+    header('Location: index.php?page=admin');
 
 }
 ?>

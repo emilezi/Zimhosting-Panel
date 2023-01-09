@@ -1,3 +1,5 @@
+<!-- User tab menu -->
+
 <ul class='aside aside-color'>
     <h2 class='topnav-inactive'>Compte</h2>
     <hr class='topnav-inactive fs-large'>

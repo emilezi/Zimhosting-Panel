@@ -1,3 +1,5 @@
+<!-- Admin tab menu -->
+
 <ul class='aside aside-color'>
     <h2 class='topnav-inactive'>Administration</h2>
     <hr class='topnav-inactive fs-large'>
@@ -6,5 +8,6 @@
     <a href="index.php?page=admin&action=store"><li>Store d'applications</li></a>
     <a href="index.php?page=admin&action=users"><li>Utilisateurs</li></a>
     <a href="index.php?page=admin&action=statistics"><li>Statistiques</li></a>
+    <a href="index.php?page=admin&action=appearance"><li>Apparence</li></a>
     <a href="index.php?page=admin&action=interface"><li>Interface</li></a>
 </ul>

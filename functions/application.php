@@ -30,6 +30,26 @@ class Application{
     }
 
     /**
+        * Retrieve application information
+        *
+        * @param array application information
+        *
+        * @return array application information
+        */
+    public function getApp($db,$app){
+
+        $q = $db->prepare("SELECT * FROM applications WHERE name=:name");
+        $q->execute([
+        'name' => $app['app_name']
+        ]);
+
+        $app = $q->fetch();
+
+        return $app;
+
+    }
+
+    /**
         * Installing the app
         *
         * @param Object database connection

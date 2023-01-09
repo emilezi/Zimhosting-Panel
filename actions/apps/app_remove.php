@@ -1,7 +1,7 @@
 <?php
 /**
     *
-    * Applications removal
+    * Applications delete
     *
     */
 

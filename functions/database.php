@@ -144,17 +144,23 @@ class Database{
             INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(12, 'game', '1', 'tower_game_master', 'Tower game master', 'no', 'no');
             INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(13, 'blog', '6.1.1', 'wordpress', 'Wordpress', 'no', 'yes');
 
-            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(1, 'background', 'ressources/img/background.jpg');
-            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(2, 'p_display', 'default');
+            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(1, 'interface_name', 'Zimhosting');
+            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(2, 'background', 'ressources/img/background.jpg');
+            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(3, 'p_display', 'default');
 
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(1, 'application', 'Applications', 'index.php', 'classic');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(2, 'user', 'Compte', 'index.php?page=account', 'classic');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(3, 'user', 'Modifier mon mot de passe', 'index.php?page=account&action=password_edit', 'classic');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(4, 'user', 'Modifier mon compte', 'index.php?page=account&action=account_edit', 'classic');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(5, 'admin', 'Administration', 'index.php?page=admin', 'admin');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(6, 'admin', 'Store d\'applications', 'index.php?page=admin', 'admin');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(7, 'admin', 'Utilisateurs', 'index.php?page=admin&action=users', 'admin');
-            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(8, 'admin', 'Nouvel utilisateur', 'index.php?page=admin&action=new_user', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(1, 'site', 'Site', 'index.php', 'classic');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(2, 'application', 'Applications', 'index.php', 'classic');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(3, 'user', 'Compte', 'index.php?page=account', 'classic');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(4, 'user', 'Modifier mon mot de passe', 'index.php?page=account&action=password_edit', 'classic');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(5, 'user', 'Modifier mon compte', 'index.php?page=account&action=account_edit', 'classic');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(6, 'admin', 'Administration', 'index.php?page=admin', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(7, 'admin', 'A propos de l\'application', 'index.php?page=admin', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(8, 'admin', 'Applications installées', 'index.php?page=admin&action=apps', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(9, 'admin', 'Store d\'applications', 'index.php?page=admin&action=store', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(10, 'admin', 'Utilisateurs', 'index.php?page=admin&action=users', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(11, 'admin', 'Statistiques', 'index.php?page=admin&action=statistics', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(12, 'admin', 'Apparence', 'index.php?page=admin&action=appearance', 'admin');
+            INSERT INTO `search_data` (`id`, `category`, `element`, `link`, `type`) VALUES(13, 'admin', 'Interface', 'index.php?page=admin&action=interface', 'admin');
 
             COMMIT;
             ");
