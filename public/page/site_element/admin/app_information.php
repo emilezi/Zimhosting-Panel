@@ -9,7 +9,7 @@ $app = $Application->getApp($db,$_GET);
 if($app == true){
     
     echo "<div class='right-container'>
-    <div class='content-large'>";
+    <div class='content-large animation-content'>";
         
     echo "<h2>Information de l'application</h2>
     <hr class='fs-large'>";
