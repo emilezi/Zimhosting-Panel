@@ -22,9 +22,9 @@ if ($Database->CheckConnection() == 0) {
 
             if($User->UserSession($db) == 0) {
 
-                include 'public/page/page_element/header.php';
+                require 'public/page/page_element/header.php';
 
-                include 'public/page/page_element/nav_bar.php';
+                require 'public/page/page_element/nav_bar.php';
 
                 if(isset($_GET['page']) && !empty($_GET['page'])) {
 
@@ -64,9 +64,9 @@ if ($Database->CheckConnection() == 0) {
 
                     }else{
 
-                        include 'public/page/page_element/header.php';
+                        require 'public/page/page_element/header.php';
 
-                        include 'public/page/page_element/nav_bar.php';
+                        require 'public/page/page_element/nav_bar.php';
         
                         require 'public/page/site_element/apps.php';
 
@@ -74,7 +74,15 @@ if ($Database->CheckConnection() == 0) {
 
                 }else{
 
-                    require 'actions/redirect/start.php';
+                    if(isset($_GET['action']) && !empty($_GET['action']) && ($_GET['action'] == 'database_user_created')){
+                        
+                        require 'public/page/site_element/start/database_user_created.php';
+                        
+                    }else{
+                        
+                        require 'actions/redirect/start.php';
+                        
+                    }
 
                 }
 
@@ -94,9 +102,17 @@ if ($Database->CheckConnection() == 0) {
 
         }else{
 
-            require 'actions/start/user_register.php';
+            if(isset($_GET['action']) && !empty($_GET['action']) && ($_GET['action'] == 'user_register')){
 
-            include 'public/page/site_element/start/user_register.php';
+                require 'actions/start/user_register.php';
+                
+                require 'public/page/site_element/start/user_register.php';
+            
+            }else{
+            
+                require 'public/page/site_element/start/database_created.php';
+            
+            }
 
         }
 

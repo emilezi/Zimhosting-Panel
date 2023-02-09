@@ -3,7 +3,7 @@
 <div class='container'>
     <div class='form m-center'>
 
-    <h1>Zimhosting panel</h1>
+    <h1>Zimhosting</h1>
 
     <hr>
 

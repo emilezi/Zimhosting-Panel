@@ -17,7 +17,7 @@ if(isset($_POST['submit_register'])){
 
         $User -> UserAdd($db,$_POST,"yes","admin");
 
-        header('Location: index.php');
+        header('Location: index.php?action=database_user_created');
 
         }else{
 

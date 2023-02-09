@@ -73,7 +73,8 @@ class Database{
             `name` varchar(255) NOT NULL,
             `qualified_name` varchar(255) NOT NULL,
             `installed` varchar(255) NOT NULL,
-            `db_require` varchar(255) NOT NULL
+            `db_require` varchar(255) NOT NULL,
+            `source` varchar(255) NOT NULL
             ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
             CREATE TABLE `setting` (
@@ -130,19 +131,19 @@ class Database{
             ALTER TABLE `connections`
             MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(1, 'game', '1', '2048_master', '2048 master', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(2, 'game', '1', 'clumsy_bird_master', 'Clumsy bird master', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(3, 'office', '10.0.5', 'glpi', 'Glpi', 'no', 'yes');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(4, 'game', '1', 'hextris', 'Hextris', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(5, 'social', '1.12.2', 'humhub', 'Humhub', 'no', 'yes');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(6, 'cloud', '25.0.1', 'nextcloud', 'Nextcloud', 'no', 'yes');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(7, 'cloud', '10.11', 'owncloud', 'Owncloud', 'no', 'yes');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(8, 'game', '1', 'pacman_canvas_master', 'Pacman canvas master', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(9, 'tool', '5.2.0', 'phpmyadmin', 'Phpmyadmin', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(10, 'game', '1', 'radius_raid_master', 'Radius raid master', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(11, 'mail', '1.17.0', 'rainloop', 'Rainloop', 'no', 'yes');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(12, 'game', '1', 'tower_game_master', 'Tower game master', 'no', 'no');
-            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`) VALUES(13, 'blog', '6.1.1', 'wordpress', 'Wordpress', 'no', 'yes');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(1, 'game', '1', '2048_master', '2048 master', 'no', 'no', 'https://github.com/gabrielecirulli/2048');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(2, 'game', '1', 'clumsy_bird_master', 'Clumsy bird master', 'no', 'no', 'https://github.com/ellisonleao/clumsy-bird');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(3, 'office', '10.0.5', 'glpi', 'Glpi', 'no', 'yes', 'https://glpi-project.org/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(4, 'game', '1', 'hextris', 'Hextris', 'no', 'no', 'https://github.com/Hextris/hextris');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(5, 'social', '1.12.2', 'humhub', 'Humhub', 'no', 'yes', 'https://www.humhub.com/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(6, 'cloud', '25.0.1', 'nextcloud', 'Nextcloud', 'no', 'yes', 'https://nextcloud.com/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(7, 'cloud', '10.11', 'owncloud', 'Owncloud', 'no', 'yes', 'https://owncloud.com/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(8, 'game', '1', 'pacman_canvas_master', 'Pacman canvas master', 'no', 'no', 'https://github.com/platzhersh/pacman-canvas');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(9, 'tool', '5.2.0', 'phpmyadmin', 'Phpmyadmin', 'no', 'no', 'https://www.phpmyadmin.net/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(10, 'game', '1', 'radius_raid_master', 'Radius raid master', 'no', 'no', 'https://github.com/jackrugile/radius-raid-js13k');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(11, 'mail', '1.17.0', 'rainloop', 'Rainloop', 'no', 'yes', 'https://www.rainloop.net/');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(12, 'game', '1', 'tower_game_master', 'Tower game master', 'no', 'no', 'https://github.com/iamkun/tower_game');
+            INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(13, 'blog', '6.1.1', 'wordpress', 'Wordpress', 'no', 'yes', 'https://wordpress.org/');
 
             INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(1, 'interface_name', 'Zimhosting');
             INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(2, 'background', 'ressources/img/background.jpg');

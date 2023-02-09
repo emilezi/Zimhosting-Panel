@@ -24,6 +24,45 @@ class File{
 
         }
     }
+
+    /**
+        * Directory delete
+        *
+        * @param string directory link
+        */
+    public function DirectoryDelete($dir){
+
+        $handle = opendir($dir);
+        while($elem = readdir($handle))
+        {
+            if(is_dir($dir.'/'.$elem) && substr($elem, -2, 2) !== '..' && substr(
+            $elem, -1, 1) !== '.')
+            {
+                $this->DirectoryDelete($dir.'/'.$elem);
+            }
+            else
+            {
+                if(substr($elem, -2, 2) !== '..' && substr($elem, -1, 1) !== '.')
+                {
+                    unlink($dir.'/'.$elem);
+                }
+            }
+        }
+        
+        $handle = opendir($dir);
+        while($elem = readdir($handle))
+        {
+            if(is_dir($dir.'/'.$elem) && substr($elem, -2, 2) !== '..' && substr(
+            $elem, -1, 1) !== '.')
+            {
+                $this->DirectoryDelete($dir.'/'.$elem);
+                rmdir($dir.'/'.$elem);
+            }    
+        
+        }
+        rmdir($dir);
+        
+    }
     
     /**
         * Check background image select a valid format import
@@ -38,10 +77,10 @@ class File{
             {
 
             if(isset($files["background"]) && $files["background"]["error"] == 0){
-                $extensions_list = array('.png');
+                $extensions_list = array('.jpg');
                 $extension = strrchr($files['background']['name'], '.');
 
-                    if($files['background']['size'] < 10485760){
+                    if($files['background']['size'] < 2048000){
 
                         if(in_array($extension, $extensions_list)){
         
@@ -80,15 +119,15 @@ class File{
         */
     public function ImportBackground($files){
 
-        if(file_exists('uploads/background.png')){
+        if(file_exists('uploads/background.jpg')){
             
-            unlink('uploads/background.png');
+            unlink('uploads/background.jpg');
         
-            move_uploaded_file($files["background"]["tmp_name"], 'uploads/background.png');
+            move_uploaded_file($files["background"]["tmp_name"], 'uploads/background.jpg');
 
         }else{
 
-            move_uploaded_file($files["background"]["tmp_name"], 'uploads/background.png');
+            move_uploaded_file($files["background"]["tmp_name"], 'uploads/background.jpg');
 
         }
     
@@ -99,8 +138,8 @@ class File{
         */
     public function DeleteBackground(){
 
-        if(file_exists('uploads/background.png')){
-            unlink('uploads/background.png');
+        if(file_exists('uploads/background.jpg')){
+            unlink('uploads/background.jpg');
         }
     
     }

@@ -12,9 +12,9 @@ while($users_list_delete = $q1->fetch(PDO::FETCH_ASSOC)){
     
     if((isset($_POST['submit_user_delete_'.$users_list_delete['id_user']])) && ($User->UserSessionAdmin($db) == 0)){
 
-        if($User -> UserDelete($db,$users_list_delete) == 0){
+        if($User -> AdminUserDelete($db,$users_list_delete) == 0){
 
-            $User->UserDelete($db, $users_list_delete);
+            $User->AdminUserDelete($db, $users_list_delete);
 
         }elseif($User -> UserDelete($db,$users_list_delete) == 1){
 

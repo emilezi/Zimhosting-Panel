@@ -241,7 +241,7 @@ class User{
         */
     public function UserDelete($db,$user){
 
-        if($user['id_user'] != $_SESSION['id_user'])
+        if($_SESSION['type'] <> 'admin')
         {
 
             $q = $db->prepare("DELETE FROM `users` WHERE id_user=:id_user");
@@ -258,6 +258,36 @@ class User{
         }
 
     }
+
+    /**
+        * Delete user
+        *
+        * @param Object database connection
+        *
+        * @param array user information
+        *
+        * @return boolean if the user has not committed an accidental deletion else return the error
+        *
+        */
+        public function AdminUserDelete($db,$user){
+
+            if($user['id_user'] != $_SESSION['id_user'])
+            {
+    
+                $q = $db->prepare("DELETE FROM `users` WHERE id_user=:id_user");
+                $q->execute([
+                'id_user' => $user['id_user']
+                ]);
+            
+                return 0;
+    
+            }else{
+    
+                return 1;
+    
+            }
+    
+        }
 
     /**
         * Editing user information

@@ -19,9 +19,15 @@ echo "<form enctype='multipart/form-data' method='post'>
 	<input type='hidden' name='MAX_FILE_SIZE' value='250000' />
 	<input type='file' name='background'/>
 	<input type='submit' name='submit_background_edit' value='Modifier la photo de fond' />
-	<br/><br/>
-	<input type='submit' name='submit_background_reset' value='Réinitialiser la photo de fond par défaut' />
-	</form>";
+	<br/><br/>";
+	
+if($Setting->getBackground($db) <> 'ressources/img/background.jpg'){
+
+echo "<input type='submit' name='submit_background_reset' value='Réinitialiser la photo de fond par défaut' />";
+
+}
+
+echo "</form>";
 
 echo "<br/>";
 

@@ -2,7 +2,10 @@
 
 <?php
 
+require 'functions/file.php';
 require 'functions/application.php';
+require 'actions/apps/app_install.php';
+require 'actions/apps/app_remove.php';
 
 $app = $Application->getApp($db,$_GET);
 
@@ -15,6 +18,8 @@ if($app == true){
     <hr class='fs-large'>";
 
     echo "<p>Nom de l'application : ".$app['qualified_name']."</p>";
+
+    echo "<p>Site officiel : <a href=".$app['source'].">".$app['source']."</a></p>";
 
     if($app['installed'] == 'yes'){
 
@@ -52,6 +57,27 @@ if($app == true){
         echo "<p>Installée : Non</p>";
 
     }
+
+    echo "<hr class='fs-small'>
+    <br/>";
+
+    if($app['installed'] == 'no'){
+
+        echo "<form method='post'>
+        <input type='submit' name='submit_install_".$app['name']."' value='Installer'>
+        </form>";
+    
+        }else{
+    
+        echo "<form method='post'>
+        <input type='submit' name='submit_remove_".$app['name']."' value='Supprimer'>
+        </form>";
+    
+        }
+
+    echo "<form action='index.php?page=admin&action=store' method='post'>
+    <input type='submit' name='submit_back' value='Retour'>
+    </form>";
 
     echo "</div>
     </div>";

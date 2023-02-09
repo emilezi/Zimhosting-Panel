@@ -5,7 +5,7 @@
     *
     */
 
-if(isset($_POST['submit_interface_name_edit']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_interface_name_edit']) && ($User->UserSessionAdmin($db) == 0) && ($Setting->getInterfaceName($db) <> $_POST['post_interface_name'])){
 
     require 'functions/form.php';
 
