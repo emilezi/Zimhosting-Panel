@@ -51,4 +51,6 @@
 
     echo "<body style='background-image: url(".$background.");'>";
 
+    echo "<div id='popup_form_container'></div>";
+
     ?>

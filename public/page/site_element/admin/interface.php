@@ -10,11 +10,11 @@ echo "<div class='right-container'>
 echo "<h2>Affichage</h2>
 <hr class='fs-large'>";
 
-echo "<p>Ce paramètre permet aux utilisateurs d'accéder à l'interface sans avoir à s'authentifier. Les utilisateurs ne s'authentifieront que sur les applications nécessaires.</p>";
+echo "<p>Ce paramètre permet de modifier l'accessibilité des utilisateurs concernant le panneau de l'application. En visibilité publique, les utilisateurs s'authentifieront uniquement sur les applications nécessaires.</p>";
 
 if($Setting->getDisplay($db) == 'public'){
 
-	echo "<p>L'interface est visible pour tout le monde</p>";
+	echo "<p>Le panneau d'application est visible pour tout le monde</p>";
 
 	echo "<form method='post'>
 	<input type='radio' name='display_radio' value='default' />Par defaut
@@ -25,7 +25,7 @@ if($Setting->getDisplay($db) == 'public'){
 
 }else{
 
-	echo "<p>L'interface n'est visible que pour les utilisateurs authentifiés</p>";
+	echo "<p>Le panneau d'application n'est visible que pour les utilisateurs authentifiés</p>";
 
 	echo "<form method='post'>
 	<input type='radio' name='display_radio' value='default' checked/>Par defaut

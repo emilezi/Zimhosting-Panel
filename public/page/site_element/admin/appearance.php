@@ -14,20 +14,26 @@ echo "<h2>Image d'arrière-plan</h2>
 <hr class='fs-large'>";
 
 echo "<p>Modifier l'image d'arrière-plan</p>";
-
-echo "<form enctype='multipart/form-data' method='post'>
-	<input type='hidden' name='MAX_FILE_SIZE' value='250000' />
-	<input type='file' name='background'/>
-	<input type='submit' name='submit_background_edit' value='Modifier la photo de fond' />
-	<br/><br/>";
 	
 if($Setting->getBackground($db) <> 'ressources/img/background.jpg'){
 
-echo "<input type='submit' name='submit_background_reset' value='Réinitialiser la photo de fond par défaut' />";
+?>
+
+<div class='center'>
+<button onclick="PopUpRadio('submit_background_reset','')">Réinitialiser la photo de fond par défaut</button>
+</div>
+
+<?php
 
 }
 
-echo "</form>";
+?>
+
+<div class='center'>
+<button onclick="PopUpInterfaceBackgroundEdit()">Modifier la photo de fond</button>
+</div>
+
+<?php
 
 echo "<br/>";
 
@@ -38,13 +44,13 @@ echo "<p>Modifier le nom de l'interface</p>";
 
 ?>
 
-<form method="post">
-    <input name="post_interface_name" type="text" placeholder="Saisissez un nom" value="<?= $Setting->getInterfaceName($db); ?>" required/>
-	<br/><br/>
-	<input type="submit" name="submit_interface_name_edit" value="Modifier le nom" />
-</form>
+<div class='center'>
+<button onclick="PopUpInterfaceNameEdit('<?= $Setting->getInterfaceName($db); ?>')">Modifier le nom</button>
+</div>
 
 <?php
+
+echo "<script src='functions/popup.js'></script>";
 
 echo "</div>
     </div>";

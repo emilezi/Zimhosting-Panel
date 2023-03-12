@@ -33,9 +33,15 @@ if($q->rowCount() > 0){
 
     }else{
 
-    echo "<form method='post'>
-    <input type='submit' name='submit_remove_".$app_list['name']."' value='Supprimer'>
-    </form>";
+    ?>
+
+    <div class='center'>
+    <button onclick="PopUpRadio('submit_remove_','<?=$app_list['name']?>')">Supprimer</button>
+    </div>
+
+    <?php
+
+    echo "<script src='functions/popup.js'></script>";
 
     }
 

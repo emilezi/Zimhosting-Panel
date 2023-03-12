@@ -42,9 +42,15 @@ while($users_list = $q->fetch(PDO::FETCH_ASSOC)){
     <input type='submit' name='submit_user_edit_".$users_list['id_user']."' value='Modifier le profil'>
     </form>";
 
-    echo "<form method='post'>
-    <input type='submit' name='submit_user_delete_".$users_list['id_user']."' value='Supprimer'>
-    </form>";
+    ?>
+
+    <div class='center'>
+    <button onclick="PopUpRadio('submit_user_delete_','<?=$users_list['id_user']?>')">Supprimer</button>
+    </div>
+
+    <?php
+
+    echo "<script src='functions/popup.js'></script>";
 
 }
 

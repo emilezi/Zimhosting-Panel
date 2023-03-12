@@ -68,10 +68,16 @@ if($app == true){
         </form>";
     
         }else{
-    
-        echo "<form method='post'>
-        <input type='submit' name='submit_remove_".$app['name']."' value='Supprimer'>
-        </form>";
+
+        ?>
+
+        <div class='center'>
+        <button onclick="PopUpRadio('submit_remove_','<?=$app['name']?>')">Supprimer</button>
+        </div>
+
+        <?php
+
+        echo "<script src='functions/popup.js'></script>";
     
         }
 

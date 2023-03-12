@@ -13,7 +13,7 @@ if(isset($_POST['submit_interface_name_edit']) && ($User->UserSessionAdmin($db) 
 
         $Setting->setInterfaceName($db, $_POST['post_interface_name']);
 
-        require 'public/page/site_element/commit_message/validated_interface_name_edit.php';
+        header('Location: index.php?page=admin&action=appearance');
 
     }elseif($Form->FormInterfaceNameCheck($_POST) == 1){
 

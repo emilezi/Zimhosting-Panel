@@ -27,9 +27,15 @@ if($q->rowCount() > 0){
     echo "<a href='index.php?page=admin&action=app_information&app_name=".$app_list['name']."'><img src='ressources/img/app_icon/".$app_list['category'].".png' width=192px;></a>";
     echo "<p>".$app_list['qualified_name']."</p>";
 
-    echo "<form method='post'>
-    <input type='submit' name='submit_remove_".$app_list['name']."' value='Supprimer'>
-    </form>";
+    ?>
+
+    <div class='center'>
+    <button onclick="PopUpRadio('submit_remove_','<?=$app_list['name']?>')">Supprimer</button>
+    </div>
+
+    <?php
+
+    echo "<script src='functions/popup.js'></script>";
 
     echo "</div>
     </div>";
