@@ -20,7 +20,7 @@ function PopUpRadio(action,value) {
 
 /*
 *
-* Yes or No Dialog Box
+* Edit Interface Name Dialog Box
 *
 */
 
@@ -34,7 +34,7 @@ function PopUpInterfaceNameEdit(value) {
 
 /*
 *
-* Yes or No Dialog Box
+* Change Interface Background Image Dialog
 *
 */
 
