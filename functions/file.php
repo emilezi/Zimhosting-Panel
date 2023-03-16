@@ -80,7 +80,7 @@ class File{
                 $extensions_list = array('.jpg');
                 $extension = strrchr($files['background']['name'], '.');
 
-                    if($files['background']['size'] < 2048000){
+                    if($files['background']['size'] < 2500000){
 
                         if(in_array($extension, $extensions_list)){
         

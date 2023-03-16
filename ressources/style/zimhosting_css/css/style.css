@@ -538,10 +538,11 @@ a:hover .burger.opened span{
 header{
  	padding: 2px 0;
  	text-align: center;
-    background-color: rgba(121, 121, 121, 0.7);
+    background-color: rgba(182, 182, 182);
     }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     header{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
@@ -560,7 +561,7 @@ header{
     padding:25px 35px;
     text-align: center;
     width: 750px;
-    background-color: rgba(172, 172, 172, 0.7);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
@@ -569,12 +570,13 @@ header{
     padding:35px 25px;
     text-align: center;
     width: 100%;
-    background-color: rgba(172, 172, 172, 0.7);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .form{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
@@ -740,11 +742,12 @@ text-align:center;
 display: inline-block;
 vertical-align: middle;
 transition:all 0.3s;
-background-color: rgba(172, 172, 172, 0.7);
+background-color: rgba(182, 182, 182);
 box-shadow: 2px 2px 2px rgb(31, 31, 31);
 }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .app{
+    background-color: rgba(182, 182, 182, 0.8);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     }
@@ -779,7 +782,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
 .pop-up-element-form{
     margin: 0 auto;
-    width:210px;
+    width:180px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -790,7 +793,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:25px 35px;
     text-align: center;
     width: 750px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     .pop-up-form{
@@ -798,7 +801,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:25px 35px;
     text-align: center;
     width: 550px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
@@ -808,7 +811,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:35px 25px;
     text-align: center;
     width: 87%;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     .pop-up-form{
@@ -816,7 +819,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     padding:35px 25px;
     text-align: center;
     width: 84%;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
