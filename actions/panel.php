@@ -7,6 +7,11 @@
 
 include 'public/page/page_element/high_page.php';
 
+$library_json = file_get_contents("ressources\l10n\library_fr.json");
+$library_textes = json_decode($library_json);
+
+//echo $library_textes->{'response'}->{'version'};
+
 if ($Database->CheckConnection() == 0) {
 
     if ($Database->DatabaseCheck() == 0) {
