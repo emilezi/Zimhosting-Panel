@@ -11,8 +11,39 @@
         }else{
             echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/css/style.css'/>";
         }
-        ?>
-        <title>Zimhosting</title>
+        if($Database->CheckConnection() == 0){
+
+            if($Database->DatabaseCheck() == 0) {
+    
+                $db = new PDO("mysql:host=" . DB_HOST . ";dbname=zimhosting", USER, PASS);
+                $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+                if($Database->CheckTables($db) == 0)
+                {
+    
+                    $title = $Setting->getInterfaceName($db);
+    
+                }else{
+    
+                    $title = "Zimhosting";
+    
+                }
+        
+                
+    
+            }else{
+    
+                $title = "Zimhosting";
+    
+            }
+    
+        }else{
+    
+            $title = "Zimhosting";
+    
+        }
+        echo "<title>".$title."</title>";
+    ?>
     </head>
 
     <?php

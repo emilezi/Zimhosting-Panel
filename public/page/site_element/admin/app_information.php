@@ -25,13 +25,13 @@ if($app == true){
 
         if($app['db_require'] == 'yes'){
 
-            echo "<p>Requiers une base de données : Oui </p>";
+            echo "<p>Requiers une base de données : Oui</p>";
         
             echo "<p>Base de données attribué pour l’application : zimhosting_".$app['name']."</p>";
 
         }else{
 
-            echo "<p>Requiers une base de données : Non </p>";
+            echo "<p>Requiers une base de données : Non</p>";
 
         }
 
@@ -44,11 +44,11 @@ if($app == true){
 
         if($app['db_require'] == 'yes'){
 
-            echo "<p>Requiers une base de données : Oui </p>";
+            echo "<p>Requiers une base de données : Oui</p>";
 
         }else{
 
-            echo "<p>Requiers une base de données : Non </p>";
+            echo "<p>Requiers une base de données : Non</p>";
 
         }
 

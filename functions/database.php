@@ -145,7 +145,7 @@ class Database{
             INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(12, 'game', '1', 'tower_game_master', 'Tower game master', 'no', 'no', 'https://github.com/iamkun/tower_game');
             INSERT INTO `applications` (`id`, `category`, `version`, `name`,`qualified_name`, `installed`, `db_require`, `source`) VALUES(13, 'blog', '6.1.1', 'wordpress', 'Wordpress', 'no', 'yes', 'https://wordpress.org/');
 
-            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(1, 'interface_name', 'Zimhosting');
+            INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(1, 'interface_name', 'Zimhosting Panel');
             INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(2, 'background', 'ressources/img/background.jpg');
             INSERT INTO `setting` (`id`, `setting_name`, `setting_set`) VALUES(3, 'p_display', 'default');
 

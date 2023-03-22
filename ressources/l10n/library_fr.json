@@ -1,0 +1,322 @@
+{
+    "contents": [
+        {
+        "site": [
+            {
+                "apps": {
+                    "install_an_app": "Installer une application",
+                    "no_app_installed": "Aucune application installée pour l’instant. Pour en installer merci de contacter l’administrateur système"
+                },
+                "search": {
+                    "result_for": "Résultat pour : ",
+                    "there_are_no_results": "Il n'y a aucun résultat trouvé pour la recherche effectuée"
+                }
+            }
+        ],
+        "admin": [
+            {
+                "about": {
+                    "title": "A propos de l’application",
+                    "text_1": "Zimhosting panel, une interface qui regroupe toutes les applications que vous souhaitez héberger de manière simple et efficace.",
+                    "text_2": "Cette application vous permet d'installer des services tels que Nextcloud, Humhub, Wordpress et autres",
+                    "text_3": "La plupart des services étant open sources, certains sont protégés par des droits d'auteur.",
+                    "text_4": "Vous avez donc la possibilité de retrouver les sources des développeurs concernés grâce au lien si dessous",
+                    "text_5": "Sources : ",
+                    "text_6": "Attention : Il est de votre responsabilité de respecter la législation en vigueur concernant la protection de chacun et la réglementation en vigueur concernant internet.",
+                    "text_7": "Réalisé par Emile ZIMMER",
+                    "text_8": "Site officiel : ",
+                    "text_9": "Version : Beta1.3"
+                },
+                "app_informtions": {
+                    "title": "Information de l'application",
+                    "app_name": "Nom de l'application : ",
+                    "official_site": "Site officiel : ",
+                    "assigned_database": "Base de données attribué pour l’application : zimhosting_",
+                    "require_database_yes": "Requiers une base de données : Oui",
+                    "require_database_no": "Requiers une base de données : Non",
+                    "version_installed": "Version installée : ",
+                    "version_available": "Version disponible : ",
+                    "installed_yes": "Installée : Oui",
+                    "installed_no": "Installée : Non"
+                },
+                "appearance": {
+                    "subtitle_1": "Image d'arrière-plan",
+                    "subtitle_2": "Nom de l’interface",
+                    "change_background_image": "Modifier l'image d'arrière-plan",
+                    "change_interface_name": "Modifier le nom de l'interface"
+                },
+                "apps": {
+                    "install_an_app": "Installer une application"
+                },
+                "interface": {
+                    "title": "Affichage",
+                    "application_panel_visibility": "Ce paramètre permet de modifier l'accessibilité des utilisateurs concernant le panneau de l'application. En visibilité publique, les utilisateurs s'authentifieront uniquement sur les applications nécessaires.",
+                    "app_panel_visible_everyone": "Le panneau d'application est visible pour tout le monde",
+                    "app_panel_only_visible_authenticated_users": "Le panneau d'application n'est visible que pour les utilisateurs authentifiés"
+                },
+                "statistics": {
+                    "title": "Statistiques",
+                    "number_apps_installed": "Nombre d'applications installées : ",
+                    "number_active_users": "Nombre d’utilisateurs actifs : "
+                },
+                "store": {
+                    "currently_no_apps_available": "Il n'y a pour l’instant aucune application disponible sur le store d'applications"
+                },
+                "users": {
+                    "title": "Utilisateurs",
+                    "new_user": "Nouvel utilisateur",
+                    "full_name": "Nom complet : ",
+                    "email_address": "Adresse email : ",
+                    "type_admin": "Type : Administrateur",
+                    "type_user": "Type : Utilisateur",
+                    "active_yes": "Actif : Oui",
+                    "active_no": "Actif : Non"
+                },
+                "user_register": {
+                    "title": "Nouvel utilisateur"
+                },
+                "user_password": {
+                    "title": "Modification du mot de passe du compte : "
+                },
+                "user_edit": {
+                    "title": "Modification du compte : "
+                }
+            }
+        ],
+        "start": [
+            {
+                "database_connection_error": {
+                    "title": "Erreur de connexion à la base de données",
+                    "the_application_requires_a_database": "Votre application nécessite une base de données pour pouvoir fonctionner. Pour vous connecter à votre serveur de base de données assurez vous que le nom de votre hôte, l’identifiant et le mot de passe de votre connexion au serveur sont correctement configurés dans le fichier « db_connexion.php ». Pour pouvoir accéder à ce fichier, rendez-vous dans le répertoire « config/ » situé à la racine du dossier de l'application."
+                },
+                "database_created": {
+                    "title": "La base de données a été créée avec succès",
+                    "the_database_was_successfully_created": "La base de données a été créée avec succès, pour pouvoir vous connecter vous devez maintenant créer le compte administrateur"
+                },
+                "database_user_created": {
+                    "title": "Le compte administrateur a été créé avec succès",
+                    "the_administrator_account_has_been_successfully_created": "Le compte administrateur a été créé avec succès, vous pouvez maintenant vous connecter à l'interface"
+                },
+                "new_database": {
+                    "title": "Création de la base de données",
+                    "to_get_started_create_the_database": "Bienvenue sur Zimhosting panel. Pour pouvoir commencer, créez la base de données en cliquant sur le bouton ci-dessous",
+                    "warning_started_create_the_database": "Attention : En cliquent sur commencer, l'application apportera des modifications à votre serveur pour la base de données « zimhosting » et toutes les bases ayant le préfix « zimhosting_ »"
+                },
+                "user_login": {
+                    "title": "Authentification",
+                    "forgot_your_password": "Mot de passe oublié ?"
+                },
+                "user_password_recovery": {
+                    "title": "Modifier mon mot de passe"
+                },
+                "user_recovery": {
+                    "title": "Récupération du compte"
+                },
+                "user_register": {
+                    "titre": "Création du compte administrateur"
+                }
+            }
+        ],
+        "user": [
+            {
+                "user": {
+                    "title": "Mon identifiant : ",
+                    "my_full_name": "Mon nom complet : ",
+                    "my_email_address": "Mon adresse email : ",
+                    "type_admin": "Type : Administrateur",
+                    "type_user": "Type : Utilisateur"
+                },
+                "user_edit": {
+                    "subtitle_1": "Modifier mon compte",
+                    "subtitle_2": "Autre action",
+                    "delete_my_account": "Supprimer mon compte"
+                },
+                "user_password_edit": {
+                    "title": "Modifier mon mot de passe"
+                }
+            }
+        ]
+        }
+    ],
+    "posts": [
+        {
+        "error": {
+            "admin_user_delete": "Le compte sélectionné ne peut pas être supprimé car il est actuellement connecté", 
+            "apps_package": "L'interface n'a pas pu ouvrir le package nécessaire à l'installation de l'application. Assurez-vous que le package demandé existe dans le dépôt", 
+            "file": "Une erreur d'importation s'est produite",
+            "file_empty": "Aucun fichier n'a été sélectionné",
+            "file_extension": "Le fichier sélectionné n'a pas d'extension au format .jpg",
+            "file_size": "Le fichier sélectionné est beaucoup trop volumineux",
+            "form": "Les champs n'ont pas été remplis correctement",
+            "form_password_check": "Les deux mots de passe saisis ne correspondent pas",
+            "form_temper": "Certains champs saisis n’acceptent pas les caractères requis",
+            "start_user": "Le nom d'utilisateur ou l'email saisi n'existe pas",
+            "start_user_password_check": "Le mot de passe saisi n’est pas correct",
+            "start_user_recovery": "L’email saisi n’existe pas",
+            "user_delete": "Le compte connecté ne peut pas être supprimé car il s'agit d'un compte administrateur",
+            "user_exists": "Il existe déjà un compte avec ce nom d'utilisateur ou cette adresse email",
+            "writeability": "L'interface n'a pas pu installer l'application à l'emplacement spécifié. Assurez-vous que les droits d'accès aux fichiers sont correctement définis."
+            },
+        "validated": {
+            "interface_background_edit": "Les paramètres de la photo d'arrière-plan ont bien été modifiés", 
+            "interface_background_reset": "Les paramètres de la photo d'arrière-plan ont bien été réinitialisés par défaut", 
+            "interface_display": "Les paramètres d'affichage ont bien été modifiés",
+            "interface_name_edit": "Les paramètres du nom de l'interface ont bien été modifiés",
+            "start_user_edit_password": "Le mot de passe du compte a été modifié avec succès",
+            "start_user_recovery": "Un lien pour modifier votre mot de passe vient d'être envoyé à l'adresse email de votre compte.",
+            "user_delete": "Le compte a été supprimé avec succès",
+            "user_edit": "Les informations du compte ont été modifiées avec succès",
+            "user_edit_password": "Le mot de passe du compte a été modifié avec succès",
+            "user_register": "Le compte a été créé avec succès."
+            },
+        "form": 
+            {
+            "you_sure_you_want_to_perform_the_requested_action": "Êtes-vous vraiment sûr de vouloir effectuer l'action demandée ?",
+            "button_yes": "Oui",
+            "button_no": "Non",
+            "changing_the_interface_name": "Modification du nom de l'interface",
+            "enter_a_name": "Saisissez un nom",
+            "change_name": "Modifier le nom",
+            "changing_the_background_image": "Modification de l'image de fond",
+            "change_background_photo": "Modifier la photo de fond"
+            }
+        }
+    ],
+    "form": [
+        {
+        "admin": [
+            {
+                "app_informtions": {
+                    "install": "Installer",
+                    "delete": "Supprimer",
+                    "feedback": "Retour"
+                },
+                "appearance": {
+                    "reset_default_background_photo": "Réinitialiser la photo de fond par défaut",
+                    "change_background_photo": "Modifier la photo de fond",
+                    "change_name": "Modifier le nom"
+                },
+                "apps": {
+                    "delete": "Supprimer"
+                },
+                "interface": {
+                    "by_default": "Par defaut",
+                    "public": "Publique",
+                    "edit": "Modifier"
+                    
+                },
+                "store": {
+                    "install": "Installer",
+                    "delete": "Supprimer"
+                },
+                "users": {
+                    "change_the_password": "Modifier le mot de passe",
+                    "modify_the_profile": "Modifier le profil",
+                    "delete": "Supprimer"
+                },
+                "user_register": {
+                    "enter_an_id": "Saisissez un identifiant",
+                    "enter_a_full_name": "Saisissez un nom complet",
+                    "enter_an_email_address": "Saisissez une adresse mail",
+                    "enter_a_password": "Saisissez un mot de passe",
+                    "retype_password": "Retapez le mot de passe",
+                    "validate": "Valider"
+                },
+                "user_password_edit": {
+                    "enter_a_new_password": "Saisissez un nouveau mot de passe",
+                    "retype_password": "Retapez le mot de passe",
+                    "validate": "Valider"
+                },
+                "user_edit": {
+                    "enter_an_id": "Saisissez un identifiant",
+                    "enter_a_full_name": "Saisissez un nom complet",
+                    "enter_an_email_address": "Saisissez une adresse mail",
+                    "validate": "Valider"
+                }
+            }
+        ],
+        "start": [
+            {
+                "database_created": {
+                    "create_account": "Créer le compte"
+                },
+                "database_user_created": {
+                    "to_login": "Se connecter"
+                },
+                "new_database": {
+                    "begin": "Commencer"
+                },
+                "user_login": {
+                    "enter_your_username": "Saisissez votre identifiant",
+                    "enter_your_password": "Saisissez votre mot de passe",
+                    "login": "Connexion"
+                },
+                "user_password_recovery": {
+                    "enter_your_password": "Saisissez votre mot de passe",
+                    "reenter_your_password": "Retapez votre mot de passe",
+                    "validate": "Valider"
+                },
+                "user_recovery": {
+                    "enter_your_email_address": "Saisissez votre adresse email",
+                    "validate": "Valider"
+                },
+                "user_register": {
+                    "enter_your_username": "Saisissez votre identifiant",
+                    "enter_your_full_name": "Saisissez votre nom complet",
+                    "enter_your_email_address": "Saisissez votre adresse email",
+                    "enter_your_password": "Saisissez votre mot de passe",
+                    "retype_password": "Retapez le mot de passe",
+                    "validate": "Valider"
+                }
+            }
+        ],
+        "user": [
+            {
+                "user": {
+                    "signout": "Se déconnecter"
+                },
+                "user_edit": {
+                    "your_full_name": "Votre nom complet",
+                    "validate": "Valider",
+                    "radio_no": "Non",
+                    "radio_yes": "Oui",
+                    "delete": "Supprimer"
+                },
+                "user_password_edit": {
+                    "enter_your_password": "Saisissez votre mot de passe",
+                    "reenter_your_password": "Retapez votre mot de passe",
+                    "validate": "Valider"
+                }
+            }
+        ],
+        "nav": {
+            "search": "Saisissez une recherche",
+            "search_submit": "Rechercher"
+            }
+        }
+    ],
+    "nav": {
+        "site": "Site", 
+        "admin": "Admin", 
+        "account": "Compte"
+    },
+    "aside": [
+        {
+        "admin": {
+            "title": "Administration", 
+            "about_the_app": "A propos de l'application", 
+            "installed_apps": "Applications installées", 
+            "application_store": "Store d'applications",
+            "users": "Utilisateurs", 
+            "statistics": "Statistiques", 
+            "appearance": "Apparence",
+            "interface": "Interface"
+        },
+        "user": {
+            "title": "Compte", 
+            "change_my_password": "Modifier mon mot de passe", 
+            "modify_my_account": "Modifier mon compte"
+            }
+        }
+    ]
+}

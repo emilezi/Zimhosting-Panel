@@ -26,7 +26,7 @@ if($search_data->rowCount() > 0) {
 
     while($a = $search_data->fetch(PDO::FETCH_ASSOC)) { 
      
-    echo "<h5><a href='" . $a['link'] . "'>Catégorie : ".$a['category']." - Element : ".$a['element']."</a></h5>";
+    echo "<h5><a href='" . $a['link'] . "'>".$a['element']."</a></h5>";
      
    }
 
