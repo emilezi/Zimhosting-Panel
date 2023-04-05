@@ -15,12 +15,11 @@
 */
 
 body{
-	background-color : rgb(185, 185, 185);
+    background-color: rgb(160, 160, 160);
   	background-repeat: no-repeat;
   	background-attachment: fixed;
   	background-size: cover;
-  	font-family: serif;
-  	color:white;
+    font-family: serif;
   	margin: 0px;
 	}
 
@@ -43,97 +42,9 @@ body{
 
 
 
-/*
-*
-* Animation of popup element dialogs
-*
-*/
-
-.animation-pop-up{
-    animation-name: pop-up-alert;
-    animation-duration: 3s;
-}
-.animation-pop-up-form{
-    animation-name: pop-up-form-alert;
-    animation-duration: 0.5s;
-}
-.animation-content{
-    animation-name: content;
-    animation-duration: 0.7s;
-}
-
-@keyframes pop-up-alert{
-    from{
-        top:50px;
-        opacity: 0;
-    }
-    15%{
-        opacity: 100%;
-    }
-    85%{
-        opacity: 100%;
-    }
-    99%{
-        top:50px;
-        opacity: 0;
-    }
-    100%{
-        top:-150px;
-    }
-}
-@keyframes pop-up-form-alert{
-    from{
-        top:0;
-        opacity: 0;
-    }
-    100%{
-        top:150px;
-    }
-}
-@keyframes content{
-    from{
-        opacity: 0;
-        margin:4% auto;
-    }
-    100%{
-        opacity: 100%;
-        margin:2% auto;
-    }
-}
-
-
-
-/*
-*
-* Color of the navigation bar and the vertical menu
-*
-*/
-
-.nav-color{
-    background-color: rgb(51, 50, 48);
-    }
-@media screen and (min-width: 1001px) {
-    .aside-color{
-    background-color: rgb(44, 44, 44);
-    }
-}
-
-
-
-@media screen and (min-width: 1001px) {
-    .m-center{
-        margin: 8em auto;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .m-center{
-        margin: 10em auto;
-    }
-}
-
 .p-vertical{
     padding:15px 0;
-}
+    }
 
 
 
@@ -155,28 +66,34 @@ hr{
 h1{
     font-family: Rocket Wildness,Times,serif;
     font-size : 31px;
+    color:white;
     }
 h2{
     font-family: Rocket Wildness,Times,serif;
     font-size : 28px;
+    color:white;
     }
 h3{
     font-family: Rocket Wildness,Times,serif;
     font-size : 26px;
+    color:white;
     }
 
 h4{
     font-family: Rocket Wildness,Times,serif;
     font-size : 24px;
+    color:white;
     }
 
 h5{
     font-family: Rocket Wildness,Times,serif;
     font-size : 20px;
+    color:white;
     }
 
 p{
     font-size : 16px;
+    color:white;
     }
 a{
    text-decoration:none;
@@ -188,10 +105,12 @@ a:hover{
     }
 form{
     margin:0 0 15px 0;
-}
+    color:white;
+    }
 button{
     margin:0 0 15px 0;
-}
+    color:white;
+    }
 
 
 
@@ -229,7 +148,7 @@ button{
     .center{
     text-align: center;
     }
-}
+    }
 
 
 
@@ -366,35 +285,28 @@ textarea {
 	}
 textarea::placeholder {
   	color: white;
-}
+    }
 
 
 
 /*
 *
-* Width Parameter Class
+* Configuring the title Presentation Header
 *
 */
 
-@media screen and (min-width: 1001px) {
-    .fs-small{
-    width:15%;
+header{
+    padding: 2px 0;
+    text-align: center;
+    background-color: rgba(182, 182, 182);
     }
-    .fs-medium{
-    width:35%;
-    }
-    }
-@media screen and (max-width: 1001px) {
-    .fs-small{
-    width:95%;
-    }
-    .fs-medium{
-    width:95%;
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    header{
+    background-color: rgba(182, 182, 182, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     }
     }
-.fs-large{
-    width:95%;
-}
 
 
 
@@ -408,12 +320,13 @@ nav{
     top: 0px;
     position: sticky;
     z-index: 100;
+    background-color: rgb(51, 50, 48);
     }
 #nav{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-}
+    }
 .topnav{
     display: flex;
     }
@@ -481,7 +394,7 @@ nav{
     }
 .topnav-burger{
     padding:8px 12px;
-}
+    }
 .topnav-burger:hover{
     background-color: rgb(255, 255, 255);
     cursor: pointer;
@@ -531,74 +444,20 @@ a:hover .burger.opened span{
 
 /*
 *
-* Configuring the title Presentation Header
-*
-*/
-
-header{
- 	padding: 2px 0;
- 	text-align: center;
-    background-color: rgba(182, 182, 182);
-    }
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header{
-    background-color: rgba(182, 182, 182, 0.8);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    }
-    }
-
-
-
-/*
-*
-* Setting up the home form class
-*
-*/
-
-@media screen and (min-width: 1001px) {
-    .form{
-    padding:25px 35px;
-    text-align: center;
-    width: 750px;
-    background-color: rgba(182, 182, 182);
-    box-shadow: 2px 2px 2px rgb(31, 31, 31);
-    }
-    }
-@media screen and (max-width: 1001px) {
-    .form{
-    padding:35px 25px;
-    text-align: center;
-    width: 100%;
-    background-color: rgba(182, 182, 182);
-    box-shadow: 2px 2px 2px rgb(31, 31, 31);
-    }
-    }
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .form{
-    background-color: rgba(182, 182, 182, 0.8);
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-    }
-    }
-
-
-
-/*
-*
 * Vertical menu setting
 *
 */
 
 @media screen and (min-width: 1000px){
     .aside{
+    padding:30px 0;
     min-width:240px;
     left:0;
     width: 10%;
     height: 100%;
     position: fixed;
     overflow: auto;
-    padding:30px 0;
+    background-color: rgb(44, 44, 44);
     }
     .right-container{
     margin: 10px 21%;
@@ -634,7 +493,71 @@ header{
 
 /*
 *
-* Parameter of the container class
+* Width Parameter Class
+*
+*/
+
+@media screen and (min-width: 1001px) {
+    .fs-small{
+    width:15%;
+    }
+    .fs-medium{
+    width:35%;
+    }
+    }
+@media screen and (max-width: 1001px) {
+    .fs-small{
+    width:95%;
+    }
+    .fs-medium{
+    width:95%;
+    }
+    }
+.fs-large{
+    width:95%;
+    }
+
+
+
+/*
+*
+* Setting up the home form class
+*
+*/
+
+@media screen and (min-width: 1001px) {
+    .form{
+    margin: 8em auto;
+    padding:25px 35px;
+    text-align: center;
+    width: 750px;
+    background-color: rgba(182, 182, 182);
+    box-shadow: 2px 2px 2px rgb(31, 31, 31);
+    }
+    }
+@media screen and (max-width: 1001px) {
+    .form{
+    margin: 10em auto;
+    padding:35px 25px;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(182, 182, 182);
+    box-shadow: 2px 2px 2px rgb(31, 31, 31);
+    }
+    }
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .form{
+    background-color: rgba(182, 182, 182, 0.8);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    }
+    }
+
+
+
+/*
+*
+* Parameter of the container class and content large and content small class and animation
 *
 */
 
@@ -642,7 +565,7 @@ header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+    }
 @media screen and (min-width: 1001px) {
     .container{
     width: 85%;
@@ -655,14 +578,6 @@ header{
     margin:2% auto;
     }
     }
-
-
-
-/*
-*
-* Content large and content small class parameters
-*
-*/
 
 .content-large{
     width: 100%;
@@ -678,6 +593,21 @@ header{
     .content-small{
     width: 100%;
     margin:2% auto;
+    }
+    }
+
+.animation-content{
+    animation-name: content;
+    animation-duration: 0.7s;
+    }
+@keyframes content{
+    from{
+        opacity: 0;
+        margin:4% auto;
+    }
+    100%{
+        opacity: 100%;
+        margin:2% auto;
     }
     }
 
@@ -733,18 +663,18 @@ header{
     }
     }
 .siteapp{
-padding: 30px;
-}
+    padding: 30px;
+    }
 .app{
-margin:10x;
-padding: 18px;
-text-align:center;
-display: inline-block;
-vertical-align: middle;
-transition:all 0.3s;
-background-color: rgba(182, 182, 182);
-box-shadow: 2px 2px 2px rgb(31, 31, 31);
-}
+    margin:10x;
+    padding: 18px;
+    text-align:center;
+    display: inline-block;
+    vertical-align: middle;
+    transition:all 0.3s;
+    background-color: rgba(182, 182, 182);
+    box-shadow: 2px 2px 2px rgb(31, 31, 31);
+    }
 @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .app{
     background-color: rgba(182, 182, 182, 0.8);
@@ -760,7 +690,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
 
 /*
 *
-* Popup dialog container setting
+* Popup dialog container setting and animation
 *
 */
 
@@ -770,15 +700,15 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     width: 100%;
     opacity: 0;
     top:-150px;
-}
+    }
 .pop-up-container-form{
     z-index: 101;
     position: absolute;
     width: 100%;
     top:150px;
-}
+    }
 .pop-up-element{
-    padding:18px;
+    padding:12px;
     }
 .pop-up-element-form{
     margin: 0 auto;
@@ -790,7 +720,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
 @media screen and (min-width: 1001px) {
     .pop-up{
     margin: 0 auto;
-    padding:25px 35px;
+    padding:15px 25px;
     text-align: center;
     width: 750px;
     background-color: rgba(182, 182, 182);
@@ -798,7 +728,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     .pop-up-form{
     margin: 0 auto;
-    padding:25px 35px;
+    padding:15px 25px;
     text-align: center;
     width: 550px;
     background-color: rgba(182, 182, 182);
@@ -808,7 +738,7 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
 @media screen and (max-width: 1001px) {
     .pop-up{
     margin: 0 auto;
-    padding:35px 25px;
+    padding:25px 15px;
     text-align: center;
     width: 87%;
     background-color: rgba(182, 182, 182);
@@ -816,13 +746,51 @@ box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     .pop-up-form{
     margin: 0 auto;
-    padding:35px 25px;
+    padding:25px 15px;
     text-align: center;
     width: 84%;
     background-color: rgba(182, 182, 182);
     box-shadow: 2px 2px 2px rgb(31, 31, 31);
     }
     }
+
+.animation-pop-up{
+    animation-name: pop-up-alert;
+    animation-duration: 3s;
+    }
+.animation-pop-up-form{
+    animation-name: pop-up-form-alert;
+    animation-duration: 0.5s;
+    }
+@keyframes pop-up-alert{
+    from{
+        top:50px;
+        opacity: 0;
+    }
+    15%{
+        opacity: 100%;
+    }
+    85%{
+        opacity: 100%;
+    }
+    99%{
+        top:50px;
+        opacity: 0;
+    }
+    100%{
+        top:-150px;
+    }
+    }
+@keyframes pop-up-form-alert{
+    from{
+        top:0;
+        opacity: 0;
+    }
+    100%{
+        top:150px;
+    }
+    }
+
 
 
 /*
