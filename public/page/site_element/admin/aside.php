@@ -1,6 +1,6 @@
 <!-- Admin tab menu -->
 
-<ul class='aside aside-color'>
+<ul class='aside'>
     <h2 class='topnav-inactive'>Administration</h2>
     <hr class='topnav-inactive fs-large'>
     <a href='index.php?page=admin'><li>A propos de l'application</li></a>

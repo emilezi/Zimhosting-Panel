@@ -7,9 +7,9 @@
         <?php
         $ip = $IP->getMachine();
         if(($ip == 'iphone') || ($ip == 'iPod') || ($ip == 'iPad')  || ($ip == 'Android')){
-            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/css/m.style.css'/>";
+            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/m.style.css'/>";
         }else{
-            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/css/style.css'/>";
+            echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/style.css'/>";
         }
         if($Database->CheckConnection() == 0){
 

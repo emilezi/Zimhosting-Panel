@@ -1,7 +1,7 @@
 <!-- Database user create message form -->
 
 <div class='container'>
-    <div class='form m-center'>
+    <div class='form'>
 
     <h1>Zimhosting</h1>
 

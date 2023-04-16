@@ -3,7 +3,9 @@
 <div class="pop-up-container animation-pop-up" role="alert">
     <div class="pop-up-element">
         <div class="pop-up">
-        Il existe déjà un compte avec ce nom d'utilisateur ou cette adresse email
+            <p>
+            Il existe déjà un compte avec ce nom d'utilisateur ou cette adresse email
+            </p>
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@ echo "<p>Réalisé par Emile ZIMMER<p>";
 
 echo "<p>Site officiel : <a href='https://emilezimmer.fr/'>emilezimmer.fr</a></p>";
 
-echo "<p>Version : Beta1.3</p>";
+echo "<p>Version : 1.0</p>";
 
 echo "</div>
     </div>";

@@ -2,7 +2,7 @@
 
 <nav>
 
-    <div id='nav' class='nav-color'>
+    <div id='nav'>
 
         <ul class="topnav">
 
@@ -42,4 +42,4 @@
 
 </nav>
 
-<script src="ressources/style/zimhosting_css/js/script.js"></script>
+<script src="ressources/style/zimhosting_css/script.js"></script>

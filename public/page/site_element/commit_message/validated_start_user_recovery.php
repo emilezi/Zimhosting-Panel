@@ -3,7 +3,9 @@
 <div class="pop-up-container animation-pop-up" role="alert">
     <div class="pop-up-element">
         <div class="pop-up">
-        Un lien pour modifier votre mot de passe vient d'être envoyé à l'adresse email de votre compte.
+            <p>
+            Un lien pour modifier votre mot de passe vient d'être envoyé à l'adresse email de votre compte.
+            </p>
         </div>
     </div>
 </div>
