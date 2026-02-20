@@ -16,13 +16,13 @@ echo "<p>Since most services are open source, some are copyrighted.</p>";
 
 echo "<p>You can therefore find the sources of the developers concerned using the link below.</p>";
 
-echo "<p>Sources : <a href='https://emilezimmer.fr/index.php?page=zimhosting_panel_apps'>https://emilezimmer.fr/index.php?page=zimhosting_panel_apps</a></p>";
+echo "<p>Sources : <a href='https://emile.ovh/index.php?page=zimhosting_panel_apps'>https://emile.ovh/index.php?page=zimhosting_panel_apps</a></p>";
 
 echo "<p>Please note: It is your responsibility to respect the legislation in force concerning the protection of everyone and the regulations in force concerning the internet.</p>";
 
 echo "<p>Directed by Emile Z.<p>";
 
-echo "<p>Official site : <a href='https://emilezimmer.fr/'>emilezimmer.fr</a></p>";
+echo "<p>Official site : <a href='https://emile.ovh/'>emile.ovh</a></p>";
 
 echo "<p>Version : 1.2</p>";
 
