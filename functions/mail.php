@@ -15,7 +15,7 @@ class Mail{
     public function MailRecovery($user){
     
         $sujet = "Zimhosting - Recupération de votre compte";
-        $entete = "From: service@" . HTTP_HOST;
+        $entete = "From: service@" . EMAIL_HOST;
         
         $message = "Pour recupérer votre compte, merci de cliquer sur ce lien
         

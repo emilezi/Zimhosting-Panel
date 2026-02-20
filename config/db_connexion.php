@@ -13,6 +13,6 @@
 
 define('DB_HOST','localhost');
 define('USER','root');
-define('PASS','');
+define('PASS','password');
 
 ?>
