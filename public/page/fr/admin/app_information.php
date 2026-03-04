@@ -2,12 +2,12 @@
 
 <?php
 
-require 'functions/file.php';
-require 'functions/application.php';
+require 'class/File.php';
+require 'class/Application.php';
 require 'actions/apps/app_install.php';
 require 'actions/apps/app_remove.php';
 
-$app = $Application->getApp($db,$_GET);
+$app = $Application->getApp($_GET);
 
 if($app == true){
     

@@ -24,7 +24,7 @@ echo "<p>Réalisé par Emile Z.<p>";
 
 echo "<p>Site officiel : <a href='https://emile.ovh/'>emile.ovh</a></p>";
 
-echo "<p>Version : 1.2</p>";
+echo "<p>Version : 1.3</p>";
 
 echo "</div>
     </div>";

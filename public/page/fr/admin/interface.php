@@ -2,7 +2,7 @@
 
 <?php
 
-require 'functions/file.php';
+require 'class/File.php';
 require 'actions/admin/interface/display_edit.php';
 require 'actions/admin/interface/reset.php';
 

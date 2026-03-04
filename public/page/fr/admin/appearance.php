@@ -2,7 +2,7 @@
 
 <?php
 
-require 'functions/file.php';
+require 'class/File.php';
 require 'actions/admin/appearance/interface_name_edit.php';
 require 'actions/admin/appearance/background_edit.php';
 require 'actions/admin/appearance/background_reset.php';
