@@ -9,20 +9,20 @@ session_start();
 
 include 'public/site/high_page.php';
 
-if($Database->CheckConnection() == 0) {
+if($Database->setConnection() == 0) {
 
-    if($Database->DatabaseCheck() == 0) {
+    if($Database->setDatabase() == 0) {
 
         $db = new PDO("mysql:host=" . DB_HOST . ";dbname=zimhosting", USER, PASS);
         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         global $db;
 
-        if($Database->CheckTables($db) == 0) {
+        if($Database->getTables() == 0) {
 
             if($Setting->getLanguage() == 'fr'){
 
-                if($User->UserSession($db) == 0) {
+                if($User->UserSession() == 0) {
 
                     require 'public/site/header.php';
     
@@ -56,9 +56,9 @@ if($Database->CheckConnection() == 0) {
                     }
     
     
-                }elseif($User->UserSession($db) == 1) {
+                }elseif($User->UserSession() == 1) {
     
-                    if($Setting->getDisplay($db) == 'public'){
+                    if($Setting->getDisplay() == 'public'){
     
                         if(isset($_GET['page']) && !empty($_GET['page']) || isset($_GET['q'])){
     
@@ -88,13 +88,13 @@ if($Database->CheckConnection() == 0) {
     
                     }
     
-                }elseif($User->UserSession($db) == 2) {
+                }elseif($User->UserSession() == 2) {
     
                     session_destroy();
     
                     header('Location: index.php');
     
-                }elseif($User->UserSession($db) == 3) {
+                }elseif($User->UserSession() == 3) {
     
                     session_destroy();
     
@@ -104,7 +104,7 @@ if($Database->CheckConnection() == 0) {
 
             }else{
     
-                if($User->UserSession($db) == 0) {
+                if($User->UserSession() == 0) {
 
                     require 'public/site/header.php';
     
@@ -138,9 +138,9 @@ if($Database->CheckConnection() == 0) {
                     }
     
     
-                }elseif($User->UserSession($db) == 1) {
+                }elseif($User->UserSession() == 1) {
     
-                    if($Setting->getDisplay($db) == 'public'){
+                    if($Setting->getDisplay() == 'public'){
     
                         if(isset($_GET['page']) && !empty($_GET['page']) || isset($_GET['q'])){
     
@@ -170,13 +170,13 @@ if($Database->CheckConnection() == 0) {
     
                     }
     
-                }elseif($User->UserSession($db) == 2) {
+                }elseif($User->UserSession() == 2) {
     
                     session_destroy();
     
                     header('Location: index.php');
     
-                }elseif($User->UserSession($db) == 3) {
+                }elseif($User->UserSession() == 3) {
     
                     session_destroy();
     

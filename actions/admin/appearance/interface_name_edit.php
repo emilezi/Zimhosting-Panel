@@ -5,17 +5,17 @@
     *
     */
 
-if(isset($_POST['submit_interface_name_edit']) && ($User->UserSessionAdmin($db) == 0) && ($Setting->getInterfaceName($db) <> $_POST['post_interface_name'])){
+if(isset($_POST['submit_interface_name_edit']) && ($User->UserSessionAdmin() == 0) && ($Setting->getInterfaceName() <> $_POST['post_interface_name'])){
 
-    require 'functions/form.php';
+    require 'class/Form.php';
 
-    if($Form->FormInterfaceNameCheck($_POST) == 0){
+    if($Form->FormInterfaceNameCheck() == 0){
 
-        $Setting->setInterfaceName($db, $_POST['post_interface_name']);
+        $Setting->setInterfaceName($_POST['post_interface_name']);
 
         header('Location: index.php?page=admin&action=appearance');
 
-    }elseif($Form->FormInterfaceNameCheck($_POST) == 1){
+    }elseif($Form->FormInterfaceNameCheck() == 1){
 
         if($Setting->getLanguage() == 'fr'){
 

@@ -2,10 +2,10 @@
 require 'config/db_connexion.php';
 require 'config/host_connexion.php';
 
-require 'functions/database.php';
-require 'functions/setting.php';
-require 'functions/user.php';
-require 'functions/ip.php';
+require 'class/Database.php';
+require 'class/Setting.php';
+require 'class/User.php';
+require 'class/IP.php';
 
 require 'actions/panel.php';
 

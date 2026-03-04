@@ -10,11 +10,11 @@ $q2->execute(['installed' => 'yes']);
 
 while($app_list_remove = $q2->fetch(PDO::FETCH_ASSOC)){
 
-    if((isset($_POST['submit_remove_'.$app_list_remove['name']])) && ($User->UserSessionAdmin($db) == 0)){
+    if((isset($_POST['submit_remove_'.$app_list_remove['name']])) && ($User->UserSessionAdmin() == 0)){
 
         $File -> DirectoryDelete('apps/'.$app_list_remove['name']);
 
-        $Application -> AppRemove($db,$app_list_remove);
+        $Application -> AppRemove($app_list_remove);
         
     }
 

@@ -7,17 +7,17 @@
 
 if(isset($_POST['submit_register'])){
 
-    require 'functions/form.php';
+    require 'class/Form.php';
 
-    if($Form->FormRegisterCheck($_POST) == 0){
+    if($Form->FormRegisterCheck() == 0){
 
-        if($Form->FormPasswordCheck($_POST) == 0){
+        if($Form->FormPasswordCheck() == 0){
 
-        $Database -> addTables($db);
+        $Database -> addTables();
 
-        $User -> UserAdd($db,$_POST,"yes","admin");
+        $User -> UserAdd("yes","admin");
 
-        $User -> UserLogin($db,$_POST);
+        $User -> UserLogin();
 
         header('Location: index.php');
 
@@ -35,7 +35,7 @@ if(isset($_POST['submit_register'])){
 
         }
 
-    }elseif($Form->FormRegisterCheck($_POST) == 1){
+    }elseif($Form->FormRegisterCheck() == 1){
 
         if($Setting->getLanguage() == 'fr'){
 

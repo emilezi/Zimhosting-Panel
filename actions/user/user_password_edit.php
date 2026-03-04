@@ -5,13 +5,13 @@
     *
     */
 
-if(isset($_POST['submit_user_password_edit']) && ($User->UserSession($db) == 0)){
+if(isset($_POST['submit_user_password_edit']) && ($User->UserSession() == 0)){
 
-require 'functions/form.php';
+require 'class/Form.php';
 
-if($Form->FormPasswordCheck($_POST) == 0){
+if($Form->FormPasswordCheck() == 0){
 
-    $User -> UserPasswordEdit($db,$_SESSION,$_POST);
+    $User -> UserPasswordEdit($_SESSION);
 
     header('Location: index.php?page=account');
 

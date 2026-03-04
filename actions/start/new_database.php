@@ -5,9 +5,9 @@
     *
     */
 
-if (isset($_POST['submit_start'])){
+if(isset($_POST['submit_start'])){
 
-    $Database->CreateDatabases();
+    $Database->newDatabase();
 
     header('Location: index.php');
 

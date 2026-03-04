@@ -5,9 +5,9 @@
     *
     */
 
-if(isset($_POST['submit_display_edit']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_display_edit']) && ($User->UserSessionAdmin() == 0)){
 
-    $Setting->setDisplay($db, $_POST['display_radio']);
+    $Setting->setDisplay($_POST['display_radio']);
 
     if($Setting->getLanguage() == 'fr'){
 

@@ -10,13 +10,13 @@ $q1->execute(['installed' => 'no']);
 
 while($app_list_install = $q1->fetch(PDO::FETCH_ASSOC)){
 
-    if((isset($_POST['submit_install_'.$app_list_install['name']])) && ($User->UserSessionAdmin($db) == 0)){
+    if((isset($_POST['submit_install_'.$app_list_install['name']])) && ($User->UserSessionAdmin() == 0)){
 
         if($File->CheckWriteability() == 0){
 
             if($Application->CheckPackage($app_list_install) == 0){
 
-                $Application -> AppInstall($db,$app_list_install);
+                $Application -> AppInstall($app_list_install);
     
             }else{
 

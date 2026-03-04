@@ -5,15 +5,15 @@
     *
     */
 
-if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin() == 0)){
 
-    if($File->CheckBackground($_FILES) == 0){
+    if($File->CheckBackground() == 0){
 
         if($File->CheckWriteability() == 0){
 
-            $File->ImportBackground($_FILES);
+            $File->ImportBackground();
 
-            $Setting->setBackground($db, 'uploads/background.jpg');
+            $Setting->setBackground('uploads/background.jpg');
     
             header('Location: index.php?page=admin&action=appearance');
 
@@ -31,7 +31,7 @@ if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin($db) == 0
 
         }
 
-    }elseif($File->CheckBackground($_FILES) == 1){
+    }elseif($File->CheckBackground() == 1){
 
         if($Setting->getLanguage() == 'fr'){
 
@@ -43,7 +43,7 @@ if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin($db) == 0
 
         }
 
-    }elseif($File->CheckBackground($_FILES) == 2){
+    }elseif($File->CheckBackground() == 2){
 
         if($Setting->getLanguage() == 'fr'){
 
@@ -55,7 +55,7 @@ if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin($db) == 0
 
         }
 
-    }elseif($File->CheckBackground($_FILES) == 3){
+    }elseif($File->CheckBackground() == 3){
 
         if($Setting->getLanguage() == 'fr'){
 
@@ -67,7 +67,7 @@ if(isset($_POST['submit_background_edit']) && ($User->UserSessionAdmin($db) == 0
 
         }
 
-    }elseif($File->CheckBackground($_FILES) == 4){
+    }elseif($File->CheckBackground() == 4){
 
         if($Setting->getLanguage() == 'fr'){
 

@@ -7,17 +7,15 @@
 
 if(isset($_POST['submit_login'])){
 
-    require 'functions/form.php';
+    require 'class/Form.php';
 
-    if($Form->FormLoginCheck($_POST) == 0){
+    if($Form->FormLoginCheck() == 0){
 
-        if($User -> UserLogin($db,$_POST) == 0){
-
-            $User -> UserLogin($db,$_POST);
+        if($User -> UserLogin() == 0){
 
             header('Location: index.php');
 
-        }elseif($User -> UserLogin($db,$_POST) == 1){
+        }elseif($User -> UserLogin() == 1){
 
             if($Setting->getLanguage() == 'fr'){
 
@@ -43,7 +41,7 @@ if(isset($_POST['submit_login'])){
 
         }
 
-    }elseif($Form->FormLoginCheck($_POST) == 1){
+    }elseif($Form->FormLoginCheck() == 1){
 
         if($Setting->getLanguage() == 'fr'){
 

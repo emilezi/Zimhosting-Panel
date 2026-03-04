@@ -7,18 +7,16 @@
 
 if(isset($_POST['submit_recovery'])){
 
-    require 'functions/form.php';
-    require 'functions/mail.php';
+    require 'class/Form.php';
+    require 'class/Mail.php';
 
-    if($Form->FormEmailCheck($_POST) == 0){
+    if($Form->FormEmailCheck() == 0){
 
-        $user = $User->getUser($db,$_POST);
+        $user = $User->getUserEmail();
 
         if($user == TRUE){
 
-            $User -> UserRecoveryKey($db,$user);
-
-            $user = $User -> getUser($db,$_POST);
+            $User -> UserRecoveryKey($user);
 
             $Mail -> MailRecovery($user);
 
@@ -46,7 +44,7 @@ if(isset($_POST['submit_recovery'])){
 
         }
 
-    }elseif($Form->FormEmailCheck($_POST) == 1){
+    }elseif($Form->FormEmailCheck() == 1){
 
         if($Setting->getLanguage() == 'fr'){
 

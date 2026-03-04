@@ -5,11 +5,11 @@
     *
     */
 
-if(isset($_POST['submit_background_reset']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_background_reset']) && ($User->UserSessionAdmin() == 0)){
 
     $File->DeleteBackground();
 
-    $Setting->setBackground($db, 'ressources/img/background.jpg');
+    $Setting->setBackground('ressources/img/background.jpg');
 
     header('Location: index.php?page=admin&action=appearance');
     

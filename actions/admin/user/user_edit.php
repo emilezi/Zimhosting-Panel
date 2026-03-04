@@ -5,19 +5,19 @@
     *
     */
 
-if(isset($_POST['submit_user_edit']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_user_edit']) && ($User->UserSessionAdmin() == 0)){
 
-require 'functions/form.php';
+require 'class/Form.php';
 
-if($Form->FormAdminUserEditCheck($_POST) == 0){
+if($Form->FormAdminUserEditCheck() == 0){
 
-    if($User -> getUser($db,$_POST) == false){
+    if($User -> getUserNandIdentifierEmail() == false){
 
-        $user = $User->getUser($db,$_GET);
+        $user = $User->getUserId();
 
-        $User -> AdminUserEdit($db,$user,$_POST);
+        $User -> AdminUserEdit($user);
 
-        header('Location: index.php?page=admin');
+        header('Location: index.php?page=admin&action=users');
 
     }else{
 

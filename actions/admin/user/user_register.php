@@ -5,17 +5,17 @@
     *
     */
 
-if(isset($_POST['submit_register']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_register']) && ($User->UserSessionAdmin() == 0)){
 
-    require 'functions/form.php';
+    require 'class/Form.php';
 
-    if($Form->FormRegisterCheck($_POST) == 0){
+    if($Form->FormRegisterCheck() == 0){
 
-        if($User -> getUser($db,$_POST) == false){
+        if($User -> getUserIdentifierEmail() == false){
 
-            $User -> UserAdd($db,$_POST,"yes","user");
+            $User -> UserAdd("yes","user");
 
-            header('Location: index.php?page=admin');
+            header('Location: index.php?page=admin&action=users');
 
         }else{
 

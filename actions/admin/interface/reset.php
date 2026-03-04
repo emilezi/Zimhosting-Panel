@@ -5,11 +5,11 @@
     *
     */
 
-if(isset($_POST['submit_reset']) && ($User->UserSessionAdmin($db) == 0)){
+if(isset($_POST['submit_reset']) && ($User->UserSessionAdmin() == 0)){
 
     $File -> DirectoryReset('apps/');
 
-    $Database -> DeleteDatabases();
+    $Database -> deleteDatabase();
 
     header('Location: index.php');
     

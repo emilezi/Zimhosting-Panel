@@ -7,11 +7,11 @@
 
 if(isset($_POST['submit_user_edit']) && ($User->UserSession($db) == 0)){
 
-require 'functions/form.php';
+require 'class/Form.php';
 
 if($Form->FormUserEditCheck($_POST) == 0){
 
-    $User -> UserEdit($db,$_SESSION,$_POST);
+    $User -> UserEdit($_SESSION);
 
     header('Location: index.php?page=account');
 

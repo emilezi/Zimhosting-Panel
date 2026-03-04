@@ -7,7 +7,7 @@
 
 if((isset($_POST['submit_user_delete'])) && (isset($_POST['delete_radio'])) && ($_POST['delete_radio'] == 'yes') && ($User->UserSession($db) == 0)){
 
-    if($User -> UserDelete($db,$_SESSION) == 0){
+    if($User -> UserDelete($_SESSION) == 0){
 
         session_destroy();
 

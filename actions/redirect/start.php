@@ -15,7 +15,7 @@ if($Setting->getLanguage() == 'fr'){
     
             require 'public/page/fr/start/user_recovery.php';
     
-        }elseif(($_GET['page'] == "user_password_recovery") && (isset($_GET['get1'])) && (!empty($_GET['get1'])) && (isset($_GET['get2'])) && (!empty($_GET['get2'])) && ($User->getUser($db, $_GET) == TRUE)) {
+        }elseif(($_GET['page'] == "user_password_recovery") && (isset($_GET['get1'])) && (!empty($_GET['get1'])) && (isset($_GET['get2'])) && (!empty($_GET['get2'])) && ($User->getUserRecovery() == TRUE)) {
     
             require 'actions/start/user_password_recovery.php';
     
