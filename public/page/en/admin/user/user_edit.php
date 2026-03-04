@@ -3,7 +3,7 @@
 <?php
 require 'actions/admin/user/user_edit.php';
 
-$user = $User->getUser($db,$_GET);
+$user = $User->getUserId();
 
 if($user == true){
     
