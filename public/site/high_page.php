@@ -11,17 +11,17 @@
         }else{
             echo "<link rel='stylesheet' href='ressources/style/zimhosting_css/style.css'/>";
         }
-        if($Database->CheckConnection() == 0){
+        if($Database->setConnection() == 0){
 
-            if($Database->DatabaseCheck() == 0) {
+            if($Database->setDatabase() == 0) {
     
                 $db = new PDO("mysql:host=" . DB_HOST . ";dbname=zimhosting", USER, PASS);
                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-                if($Database->CheckTables($db) == 0)
+                if($Database->getTables() == 0)
                 {
     
-                    $title = $Setting->getInterfaceName($db);
+                    $title = $Setting->getInterfaceName();
     
                 }else{
     
@@ -48,17 +48,17 @@
 
     <?php
 
-    if($Database->CheckConnection() == 0){
+    if($Database->setConnection() == 0){
 
-        if($Database->DatabaseCheck() == 0) {
+        if($Database->setDatabase() == 0) {
 
             $db = new PDO("mysql:host=" . DB_HOST . ";dbname=zimhosting", USER, PASS);
             $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if($Database->CheckTables($db) == 0)
+            if($Database->getTables() == 0)
             {
 
-                $background = $Setting->getBackground($db);
+                $background = $Setting->getBackground();
 
             }else{
 

@@ -2,6 +2,6 @@
 
 <header class='header-color'>
 
-    <h1><?= $Setting->getInterfaceName($db); ?></h1>
+    <h1><?= $Setting->getInterfaceName(); ?></h1>
 
 </header>
