@@ -3,7 +3,7 @@
 <div class='container'>
     <div class='form'>
 
-    <h1><?= $Setting->getInterfaceName($db); ?></h1>
+    <h1><?= $Setting->getInterfaceName(); ?></h1>
 
     <hr>
 
